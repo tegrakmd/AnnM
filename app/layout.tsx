@@ -1,7 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Ubuntu } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
+import LenisWrapper from "@/components/LenisWrapper";
 
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+
+const ubuntu = Ubuntu({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-ubuntu",
+  display: "swap",
+});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,11 +34,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={cn(inter.variable, ubuntu.variable)}>
+      <body className={cn("antialiased font-ubuntu", ubuntu.variable)}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <LenisWrapper>{children}</LenisWrapper>
+        </ThemeProvider>
       </body>
     </html>
   );
