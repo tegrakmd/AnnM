@@ -463,7 +463,7 @@ const AvaMax = ({
   return (
     <div
       className={cn(
-        "bg-primary shadow-black/6.5 mt-1.5 h-fit shrink-0 cursor-pointer w-fit rounded-r-full rounded-t-full p-1.5 shadow-md",
+        "bg-primary shadow-black/6.5  h-fit shrink-0 cursor-pointer w-fit rounded-r-full rounded-t-full p-1 shadow-md",
         className
       )}
       {...props}>
@@ -471,7 +471,7 @@ const AvaMax = ({
         <Image
           alt="avatar"
           loading="lazy"
-          className="size-10"
+          className=" object-cover"
           fill
           decoding="async"
           src={image}

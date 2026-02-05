@@ -2,6 +2,7 @@ import { ModeToggle } from "@/components/modeToggle";
 
 import { SectionSecond } from "./_landing/section/second";
 import { HeroSection } from "./_landing/section/hero";
+import { Cartises } from "./_landing/section/cartis";
 
 export default function Page() {
   return (
@@ -9,6 +10,7 @@ export default function Page() {
       <ModeToggle />
       <SectionSecond />
       <HeroSection />
+      <Cartises />
     </div>
   );
 }
