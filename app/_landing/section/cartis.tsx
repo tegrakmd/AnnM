@@ -31,6 +31,7 @@ export const CrossedPistols: React.FC<{ className?: string }> = ({
     <path d="M70 60 L85 85 L75 90 L60 65" fill="currentColor" opacity="0.8" />
   </svg>
 );
+// const : INtitailisartion_
 
 export interface CreditData {
   year: string;

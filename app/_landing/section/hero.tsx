@@ -9,7 +9,7 @@ export function HeroSection() {
     // </section>
     <>
       <section className="relative p-4 w-full">
-        <div className="h-[50vh] md:h-[80dvh] max-w-[400px] mx-auto w-full rounded-2xl overflow-hidden shadow-2xl">
+        <div className="h-[80vh] md:h-[90dvh] max-w-[800px] mx-auto w-full rounded-2xl overflow-hidden shadow-2xl">
           <ParallaxImageC
             src="/Test/4.jpeg"
             alt="bluer"

@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import LenisWrapper from "@/components/LenisWrapper";
+import { ModeToggle } from "@/components/modeToggle";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -34,13 +35,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn(inter.variable, ubuntu.variable)}>
-      <body className={cn("antialiased font-ubuntu", ubuntu.variable)}>
+    // before:fixed before:inset-0 before:-z-40 dark:before:[background-image:url('/grainy-bg.svg')] dark:before:opacity-[.015]
+    <html lang="en" suppressHydrationWarning className="no-scrollbar">
+      <body className={cn(inter.variable, ubuntu.variable)}>
+        <div className="bg-gray-600 dark:bg-gray-950 before:fixed before:inset-0 before:-z-40 dark:before:[background-image:url('/grainy-bg.svg')] dark:before:opacity-[.015]"></div>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <LenisWrapper>{children}</LenisWrapper>
+          <LenisWrapper>
+            <ModeToggle />
+            {children}
+          </LenisWrapper>
         </ThemeProvider>
       </body>
     </html>

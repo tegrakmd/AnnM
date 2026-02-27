@@ -8,17 +8,17 @@ export function SectionSecond() {
       <div className="mx-auto max-w-5xl px-6">
         {/* En-tête (Titre et boutons) */}
         <div className="mb-20 text-center *:mx-auto ">
-          <span className="text-primary text-sm  relative border-border-illustration border rounded-sm px-4  dark:bg-accent/30 py-1">
-            Build
+          <span className="dark:text-white text-primary text-sm  relative border-border-illustration border rounded-sm px-4  dark:bg-accent/30 py-1">
+            Tegra kmd
             <AvaMax
               image="/avat.webp"
               className="absolute -top-10 left-16 z-10"
             />
           </span>
-          <h1 className="mt-6 max-w-2xl text-balance text-4xl  font-medium md:text-5xl lg:text-6xl">
-            Streamline Your Invoicing Process
+          <h1 className="mt-6 max-w-2xl text-balance text-4xl -tracking-wider  font-medium md:text-5xl lg:text-6xl">
+            Streamline Your Invoicing Process.
           </h1>
-          <p className="text-muted-foreground mb-6 mt-4 max-w-3xl text-balance text-lg">
+          <p className="text-muted-foreground mb-6 mt-4 max-w-3xl text-balance tracking-tight text-sm md:text-lg">
             Simple and secure user authentication, complete with everything you
             need out-of-the-box to provide a secure experience for your users.
           </p>
@@ -360,45 +360,7 @@ export function SectionSecond() {
           </div>
         </div>
       </div>
-      <section className="bg-linear-to-b to-background pb-36 pt-24">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="mx-auto max-w-4xl">
-            {/* Chat / Message Display Section */}
-            <div aria-hidden="true" className="flex flex-col gap-6">
-              {/* Right Message (Indigo) */}
-              <div className="w-full">
-                <div className="before:mask-x-from-75% before:border-foreground/10 relative before:absolute before:inset-0 before:border-y before:border-dashed">
-                  <div className="relative mx-auto max-w-lg">
-                    <div className="max-w-3/4 bg-linear-to-b from-card ring-foreground/10 inset-ring inset-ring-background/50 ml-auto w-fit rounded-t-2xl rounded-bl-2xl rounded-br to-indigo-500/5 p-3 text-sm text-indigo-950 shadow-md shadow-indigo-600/10 ring-1 selection:bg-indigo-900/10 selection:text-indigo-700 dark:text-indigo-50/65 dark:selection:text-indigo-300">
-                      Distinctio provident nobis repudiandae deleniti
-                      necessitatibus.
-                    </div>
-                  </div>
-                </div>
-                <div className="mx-auto mt-1 max-w-lg">
-                  <span className="text-muted-foreground block text-right text-xs">
-                    Sat 22 Feb
-                  </span>
-                </div>
-              </div>
-              {/* Left Message (Emerald) */}
-              <div className="h-30">
-                <div className="before:mask-x-from-75% before:border-foreground/10 relative before:absolute before:inset-0 before:border-y before:border-dashed">
-                  <div className="relative mx-auto max-w-lg">
-                    <div className="max-w-3/4 bg-linear-to-b from-card ring-foreground/10 inset-ring inset-ring-background/50 w-fit rounded-t-2xl rounded-bl rounded-br-2xl to-emerald-500/5 p-3 text-sm text-emerald-950 shadow-md shadow-emerald-600/10 ring-1 selection:bg-emerald-900/10 selection:text-emerald-700 dark:text-emerald-50/65 dark:selection:text-emerald-300">
-                      <div className="text-sm">
-                        Tailark is a collection of pre-built, responsive UI
-                        blocks and components designed to accelerate the
-                        development of marketing websites.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MessageArea />
 
       <CartoBlue
         title="Tegra kmd"
@@ -410,14 +372,6 @@ export function SectionSecond() {
     </section>
   );
 }
-
-interface CartoBlueProps {
-  image: string;
-  title: string;
-  description: string;
-  reply: string;
-}
-
 export const CartoBlue = ({
   title,
   description,
@@ -428,7 +382,7 @@ export const CartoBlue = ({
     <div className="bg-foreground/3 max-w-2xs ring-border-illustration shadow-black/6.5 overflow-hidden rounded-xl shadow ring-1 mx-auto">
       <div className="text-muted-foreground bg-illustration border-border-illustration border-dashed -mx-px rounded-lg border-x border-b p-3 text-sm">
         <div className="mb-3 flex items-center gap-2">
-          <div className="before:border-foreground/15 shadow-black/6.5 relative size-5 overflow-hidden rounded-full shadow before:absolute before:inset-0 before:rounded-full before:border">
+          <div className="before:border-foreground/15 shadow-black/6.5 relative size-5 md:size-7 overflow-hidden rounded-full shadow before:absolute before:inset-0 before:rounded-full before:border">
             <Image
               alt="shadcn"
               loading="lazy"
@@ -436,12 +390,12 @@ export const CartoBlue = ({
               height={82}
               decoding="async"
               data-nimg="1"
-              className="rounded-full"
+              className="rounded-full grayscale-100"
               src={image}
               style={{ color: "transparent" }}
             />
           </div>
-          <span className="text-foreground text-xs font-medium">{title}</span>
+          <span className="text-foreground text-xs">{title}</span>
         </div>
         <span>{description}</span>
       </div>
@@ -451,6 +405,28 @@ export const CartoBlue = ({
     </div>
   );
 };
+
+// All Functions Messages And Alls Thinks
+export function MessageArea() {
+  return (
+    <section className="bg-linear-to-b  py-12 ">
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="mx-auto max-w-4xl">
+          <div className="flex flex-col gap-6">
+            <RightMessage />
+            <LeftMessage />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+interface CartoBlueProps {
+  image: string;
+  title: string;
+  description: string;
+  reply: string;
+}
 
 const AvaMax = ({
   image,
@@ -574,7 +550,7 @@ const LogoMax = () => {
               y="6"
               colorInterpolationFilters="sRGB"
               filterUnits="userSpaceOnUse">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
               <feBlend
                 in="SourceGraphic"
                 in2="BackgroundImageFix"
@@ -591,7 +567,7 @@ const LogoMax = () => {
               y="12"
               colorInterpolationFilters="sRGB"
               filterUnits="userSpaceOnUse">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
               <feBlend
                 in="SourceGraphic"
                 in2="BackgroundImageFix"
@@ -608,7 +584,7 @@ const LogoMax = () => {
               y="-130"
               colorInterpolationFilters="sRGB"
               filterUnits="userSpaceOnUse">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
               <feBlend
                 in="SourceGraphic"
                 in2="BackgroundImageFix"
@@ -625,7 +601,7 @@ const LogoMax = () => {
               y="-153"
               colorInterpolationFilters="sRGB"
               filterUnits="userSpaceOnUse">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
               <feBlend
                 in="SourceGraphic"
                 in2="BackgroundImageFix"
@@ -642,7 +618,7 @@ const LogoMax = () => {
               y="91"
               colorInterpolationFilters="sRGB"
               filterUnits="userSpaceOnUse">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
               <feBlend
                 in="SourceGraphic"
                 in2="BackgroundImageFix"
@@ -659,7 +635,7 @@ const LogoMax = () => {
               y="132"
               colorInterpolationFilters="sRGB"
               filterUnits="userSpaceOnUse">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
               <feBlend
                 in="SourceGraphic"
                 in2="BackgroundImageFix"
@@ -773,10 +749,10 @@ const LogoMax = () => {
                   height="390"
                   x="-69"
                   y="-46"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                   filterUnits="userSpaceOnUse">
                   <feFlood
-                    flood-opacity="0"
+                    floodOpacity="0"
                     result="BackgroundImageFix"></feFlood>
                   <feBlend
                     in="SourceGraphic"
@@ -792,10 +768,10 @@ const LogoMax = () => {
                   height="273"
                   x="-99"
                   y="6"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                   filterUnits="userSpaceOnUse">
                   <feFlood
-                    flood-opacity="0"
+                    floodOpacity="0"
                     result="BackgroundImageFix"></feFlood>
                   <feBlend
                     in="SourceGraphic"
@@ -811,10 +787,10 @@ const LogoMax = () => {
                   height="273"
                   x="-113"
                   y="12"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                   filterUnits="userSpaceOnUse">
                   <feFlood
-                    flood-opacity="0"
+                    floodOpacity="0"
                     result="BackgroundImageFix"></feFlood>
                   <feBlend
                     in="SourceGraphic"
@@ -830,10 +806,10 @@ const LogoMax = () => {
                   height="329"
                   x="-41.5"
                   y="-130"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                   filterUnits="userSpaceOnUse">
                   <feFlood
-                    flood-opacity="0"
+                    floodOpacity="0"
                     result="BackgroundImageFix"></feFlood>
                   <feBlend
                     in="SourceGraphic"
@@ -849,10 +825,10 @@ const LogoMax = () => {
                   height="329"
                   x="-45"
                   y="-153"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                   filterUnits="userSpaceOnUse">
                   <feFlood
-                    flood-opacity="0"
+                    floodOpacity="0"
                     result="BackgroundImageFix"></feFlood>
                   <feBlend
                     in="SourceGraphic"
@@ -868,7 +844,7 @@ const LogoMax = () => {
                   height="329"
                   x="-41"
                   y="91"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                   filterUnits="userSpaceOnUse">
                   <feFlood
                     flood-opacity="0"
@@ -887,10 +863,10 @@ const LogoMax = () => {
                   height="329"
                   x="-39"
                   y="132"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                   filterUnits="userSpaceOnUse">
                   <feFlood
-                    flood-opacity="0"
+                    floodOpacity="0"
                     result="BackgroundImageFix"></feFlood>
                   <feBlend
                     in="SourceGraphic"
@@ -955,6 +931,69 @@ const LogoMax = () => {
       </div>
       <div className="text-foreground/65 mt-4 text-center text-xs   font-medium">
         Gemini Max
+      </div>
+    </div>
+  );
+};
+const RightMessage = () => {
+  return (
+    <div className="w-full">
+      <div className="before:mask-x-from-75% before:border-foreground/10 relative before:absolute before:inset-0 before:border-y before:border-dashed">
+        <div className="relative mx-auto max-w-lg">
+          <div className="w-fit max-w-3/4 bg-linear-to-b from-card to-indigo-500/5  ring-foreground/10 inset-ring inset-ring-background/50 ml-auto  rounded-t-2xl rounded-bl-2xl rounded-br p-3 text-sm text-indigo-950 shadow-md shadow-indigo-600/10 ring-1 selection:bg-indigo-900/10 selection:text-indigo-700 dark:text-indigo-50/65 dark:selection:text-indigo-300">
+            <div className="text-xs md:text-sm">
+              Distinctio provident nobis repudiandae deleniti necessitatibus.to
+              accelerate the development of marketing websites.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto overflow-hidden mt-1  max-w-lg flex items-end justify-end gap-2">
+        <span className="text-muted-foreground block text-xs">Tegra kmd</span>
+
+        <div className="before:border-foreground/20 relative size-6 md:size-8 overflow-hidden  rounded-t-2xl rounded-bl-2xl rounded-br  border shadow-md before:absolute before:inset-0 before:rounded-md before:border">
+          <Image
+            alt="avatar"
+            loading="lazy"
+            className=" object-cover"
+            fill
+            decoding="async"
+            src="/avat.webp"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const LeftMessage = () => {
+  return (
+    <div className="h-30">
+      <div className="before:mask-x-from-75% before:border-foreground/10 relative before:absolute before:inset-0 before:border-y before:border-dashed">
+        <div className="relative mx-auto max-w-lg">
+          <div className="max-w-3/4 bg-linear-to-b from-card ring-foreground/10 inset-ring inset-ring-background/50 w-fit rounded-t-2xl rounded-bl rounded-br-2xl to-emerald-500/5 p-3 text-sm text-emerald-950 shadow-md shadow-emerald-600/10 ring-1 selection:bg-emerald-900/10 selection:text-emerald-700 dark:text-emerald-50/65 dark:selection:text-emerald-300">
+            <div className="text-xs md:text-sm">
+              Tailark is a collection of pre-built, responsive UI blocks and
+              components designed to accelerate the development of marketing
+              websites.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto overflow-hidden mt-1  max-w-lg flex items-end justify-star gap-2">
+        <div className="before:border-foreground/20 relative size-6 md:size-8 overflow-hidden  rounded-t-2xl rounded-bl rounded-br-2xl  border shadow-md before:absolute before:inset-0 before:rounded-md before:border">
+          <Image
+            alt="avatar"
+            loading="lazy"
+            className=" object-cover"
+            fill
+            decoding="async"
+            src="/avat.webp"
+          />
+        </div>
+        <span className="text-muted-foreground block text-xs text-shadow-blue-400">
+          Frederick Bk
+        </span>
       </div>
     </div>
   );

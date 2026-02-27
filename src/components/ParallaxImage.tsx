@@ -1,5 +1,7 @@
 "use client";
-
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 export interface ParallaxImageProps {
   src: string;
   alt: string;
@@ -16,10 +18,6 @@ export interface SectionProps {
   imageSrc: string;
   reverse?: boolean;
 }
-
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import React, { useRef, useEffect, useState, useCallback } from "react";
 
 /**
  * Linear Interpolation helper
@@ -40,6 +38,7 @@ export const ParallaxImage: React.FC<ParallaxImageProps> = ({
   const imageRef = useRef<HTMLImageElement>(null);
 
   // Animation State
+
   const currentTranslateY = useRef(0);
   const targetTranslateY = useRef(0);
   const rafId = useRef<number | null>(null);
@@ -47,6 +46,7 @@ export const ParallaxImage: React.FC<ParallaxImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Bounds tracking
+
   const bounds = useRef({ top: 0, height: 0 });
 
   const updateBounds = useCallback(() => {
@@ -65,6 +65,7 @@ export const ParallaxImage: React.FC<ParallaxImageProps> = ({
     window.addEventListener("resize", updateBounds);
 
     // Setup Intersection Observer to pause logic when off-screen
+
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry.isIntersecting),
       { threshold: 0 }
