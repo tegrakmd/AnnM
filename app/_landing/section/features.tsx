@@ -84,7 +84,7 @@ export function FeatureSection() {
 
                     {/* Card Header */}
                     <span className="text-muted-foreground text-xs flex items-center gap-1.5 relative z-10">
-                      Today{" "}
+                      Today
                       <span className="bg-foreground/50 size-1 rounded-full"></span>{" "}
                       09:15 AM
                     </span>

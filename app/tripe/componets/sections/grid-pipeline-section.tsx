@@ -7,22 +7,24 @@ import { CornerMarkers } from "../ui/corner-markers";
 
 export function GridPipelineSection() {
   return (
-    <section className="bg-background overflow-hidden border-t">
+    <section className=" overflow-hidden border-t">
       <div className="mx-auto max-w-5xl px-6 py-24 xl:px-0">
         <div className="relative">
           <CornerMarkers />
 
-          <div className="grid grid-cols-1 divide-y border md:grid-cols-3 md:divide-x md:divide-y-0">
+          <div className="relative grid grid-cols-1 divide-y border md:grid-cols-3 md:divide-x md:divide-y-0">
             {/* Left Column */}
-            <div className="w-full p-6 md:p-8 lg:p-12">
-              <h2 className="text-foreground mb-6 text-3xl font-semibold">
-                Set up your pipeline in minutes
-              </h2>
-              <p className="text-muted-foreground text-lg">
-                Our powerful analytics platform helps you visualize complex
-                data, identify trends, and make data-driven decisions with
-                confidence.
-              </p>
+            <div className="w-full h-full p-6 md:p-8 lg:p-12  ">
+              <div className="sticky  top-5 size-fit">
+                <h2 className="text-foreground mb-6 text-3xl font-semibold">
+                  Set up your pipeline in minutes
+                </h2>
+                <p className="text-muted-foreground text-lg">
+                  Our powerful analytics platform helps you visualize complex
+                  data, identify trends, and make data-driven decisions with
+                  confidence.
+                </p>
+              </div>
             </div>
 
             {/* Right Column (Steps) */}
