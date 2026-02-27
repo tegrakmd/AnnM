@@ -6,7 +6,7 @@ import { GanttChartDemo } from "../ui/gantt-chart-demo";
 
 export function PipelineSection() {
   return (
-    <section className="bg-background overflow-hidden py-24">
+    <section className=" overflow-hidden py-24">
       <div className="relative mx-auto max-w-5xl space-y-2 pr-6 md:px-6">
         {/* Header */}
         <div className="mb-32 max-w-xl space-y-4 max-md:pl-6">
