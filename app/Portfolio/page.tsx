@@ -6,6 +6,8 @@ import { OpenRoleDeux } from "./sections/dataFilter";
 import { FeatureSection } from "@app/_landing/section/features";
 import FeatureSectionDeux from "@app/_landing/section/featuresDeux";
 import EngineFeatureSection from "@app/_landing/section/featureTroi";
+import { FeatureForSection } from "@app/_landing/section/featureFor";
+import { FeaturesFive } from "@app/_landing/section/featureFiveS";
 
 export function Annonces() {
   return (
@@ -48,6 +50,8 @@ export default function Home() {
             <FeatureSectionDeux />
             <EngineFeatureSection />
             <MessageArea />
+            <FeatureForSection />
+            <FeaturesFive />
             <OpenRoleDeux />
           </div>
         </div>

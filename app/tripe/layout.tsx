@@ -1,7 +1,6 @@
 import LenisWrapper from "@/components/LenisWrapper";
 
 import { ThemeProvider } from "@/components/theme-provider";
-import { cn } from "@/lib/utils";
 
 export default function RootLayout({
   children,

@@ -10,6 +10,18 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "avatars.githubusercontent.com", // Added for the Shadcn avatar
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com", // Added for the Shadcn avatar
+        pathname: "/**",
+      },
+
+      {
+        protocol: "https",
+        hostname: "pro.tailark.com",
+        pathname: "/**",
       },
     ],
   },
