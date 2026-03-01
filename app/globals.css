@@ -477,6 +477,8 @@
 }
 @layer utilities {
   .dither {
+    --dither-cell-lg: 20px;
+    --dither-image-url: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAu0lEQVQ4T6WSMQqFMBBEE2wDXiVgG8gtglilCuIpcoogVqlEPIVgK3gVIa2Qzw9YbIpttlqGgbcMM5wxlr33LMbI/nccx3I/PQwD0LXPj+OgAaSUBWCtLZ+2bSv308uyAF37/HkeGkAIASL0fQ8yT9MEdO3z67poAKUUiDDPM8i87zvQtc/f96UBmqZBazTG4Ds4z5MG6LoOrTGEgO8gpUQDtG2L1uicw3dw3zcNoLVGa1zXFd9BzpkE+AFp94/4eKx9+AAAAABJRU5ErkJggg==);
     --dither-gray: 1;
     --dither-contrast: 120;
     --dither-bright: 1;
@@ -492,6 +494,7 @@
     position: relative;
     overflow: hidden;
   }
+
   .dither:after {
     content: "";
     pointer-events: none;
@@ -511,6 +514,25 @@
   }
   .mask-b-from-50\% {
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  }
+}
+@layer components {
+  .marquee-30 {
+    animation: marquee 30s linear infinite;
+  }
+  .marquee-15 {
+    animation: marquee 15s linear infinite;
+  }
+  .marquee-10 {
+    animation: marquee 10s linear infinite;
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 @keyframes cursor-left {
