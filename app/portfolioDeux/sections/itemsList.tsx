@@ -21,8 +21,8 @@ const ProjectList: ProjectListProps[] = [
   {
     Id: 2,
     Image: "/upload.png",
-    Link: "book.com",
-    Name: "Book",
+    Link: "/tripe/pages/links/blog",
+    Name: "My Blog",
     dateMois: "Feb",
     dateDate: 9,
   },
@@ -84,7 +84,6 @@ const ProjeListData = () => {
         <Link
           key={doc.Id}
           href={doc.Link}
-          target="_blank"
           className="group relative flex items-center justify-between rounded-xl px-4 py-3 text-left transition-transform duration-200 hover:bg-muted/40 active:scale-[0.99]">
           <div className="flex flex-1 items-center gap-2 min-w-0 mr-4">
             <div className=" w-fit  overflow-hidden  ring-black/10 relative  rounded shadow-md shadow-black/6.5 ring-1 border-transparent  dark:ring-white/10 dark:border-black">
