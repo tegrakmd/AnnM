@@ -15,6 +15,9 @@ export default function Allthink() {
           <Link href="./tripe/pages/links/blog">BlogPage</Link>
         </li>
         <li>
+          <Link href="./tripe/pages/links/blogMdx">BlogMdx</Link>
+        </li>
+        <li>
           <Link href="./tripe/pages/links/marquee">Marquee</Link>
         </li>
         <li>
