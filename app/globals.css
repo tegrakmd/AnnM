@@ -129,7 +129,7 @@
 
 /* @plugin 'tailwindcss-animate'; */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 @custom-variant dark (&:is(.dark *));
 

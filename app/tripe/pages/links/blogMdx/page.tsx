@@ -61,13 +61,13 @@ export default function BlogPostPage() {
             </nav>
 
             {/* Title and date */}
-            <header className="my-8">
+            <header className="my-8 ">
               <time
                 className="text-muted-foreground text-sm"
                 dateTime="2025-10-29T05:44:39.642Z">
                 October 29, 2025
               </time>
-              <h1 className="text-foreground text-balance text-3xl font-semibold md:text-4xl md:leading-tight">
+              <h1 className="text-foreground text-balance text-3xl font-semibold md:text-4xl md:leading-tight ">
                 Cutting-Edge Innovations in Data Analytics
               </h1>
             </header>
@@ -80,14 +80,25 @@ export default function BlogPostPage() {
             {/* Left column (article) */}
             <div className="lg:max-w-2xl">
               {/* Featured image */}
-              <div className="relative mb-12 overflow-hidden rounded-xl border shadow shadow-black/5">
-                <Image
-                  alt="Cutting-Edge Innovations in Data Analytics"
-                  width={1200}
-                  height={675}
-                  className="aspect-video w-full object-cover"
-                  src="https://cdn.sanity.io/images/6e6amfga/production/ba1dcf81c222bcc5a68a3165815c098af81b3813-3125x2083.jpg"
+              <div className="relative ">
+                <div
+                  aria-hidden
+                  className="mask-x-from-75% pointer-events-none absolute -inset-x-32 inset-y-0 border-y"
                 />
+                <div
+                  aria-hidden
+                  className="mask-y-from-55% pointer-events-none absolute -inset-y-32 inset-x-0 border-x"
+                />
+                <div className="relative mb-12 ring-border-illustration bg-card  overflow-hidden rounded-md border border-transparent shadow-md shadow-black/5 ring-1 ">
+                  <Image
+                    alt="Cutting-Edge Innovations in Data Analytics"
+                    src="/upload.png"
+                    width={1200}
+                    height={1200}
+                    loading="lazy"
+                    className="aspect-video size-full object-cover"
+                  />
+                </div>
               </div>
 
               {/* Article body */}
@@ -264,15 +275,15 @@ export default function BlogPostPage() {
                   <div className="grid grid-cols-[auto_1fr] items-center gap-2">
                     <div className="ring-border-illustration bg-card aspect-square size-6 overflow-hidden rounded-md border border-transparent shadow-md shadow-black/15 ring-1">
                       <Image
-                        alt="Shadcn"
+                        alt="Tegra Kmd"
                         width={460}
                         height={460}
                         className="size-full object-cover"
-                        src="https://cdn.sanity.io/images/6e6amfga/production/9b7681d5839539678115f9a5b861f3ece463bf18-400x400.jpg"
+                        src="/avat.webp"
                       />
                     </div>
                     <span className="text-foreground line-clamp-1 text-sm">
-                      Shadcn
+                      Tegra Kmd
                     </span>
                   </div>
                   <div className="grid grid-cols-[auto_1fr] items-center gap-2">

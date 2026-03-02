@@ -847,7 +847,7 @@ const LogoMax = () => {
                   colorInterpolationFilters="sRGB"
                   filterUnits="userSpaceOnUse">
                   <feFlood
-                    flood-opacity="0"
+                    floodOpacity="0"
                     result="BackgroundImageFix"></feFlood>
                   <feBlend
                     in="SourceGraphic"

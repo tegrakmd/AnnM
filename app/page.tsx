@@ -9,6 +9,7 @@ import { MainSection } from "./_landing/section/MainSection";
 import { FeatureSection } from "./_landing/section/features";
 import { Herro } from "./_landing/section/herro";
 import { FirstT } from "./tripe/componets/firstT";
+import { Sou } from "./sou";
 
 export default function Page() {
   return (
@@ -21,6 +22,7 @@ export default function Page() {
       <FirstT />
       {/* <HeroSection /> */}
       {/* <Cartises /> */}
+      <Sou />
       <Account />
     </div>
   );
