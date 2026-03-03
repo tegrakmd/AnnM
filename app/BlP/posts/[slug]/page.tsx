@@ -11,15 +11,19 @@ export default async function RoutePagePost({
   if (!post) {
     notFound();
   }
-  
+
+
   return (
-    <div className="flex flex-col max-w-4xl max-auto gap-4 min-h-screen">
-        <div classNAme="flex flex-cols gap-4">
-          <span className="text-muted-foreground text-sm">
-          {post.publishedAt}
-          </span>
-          <h1 className="text-5xl font-bold">{post.title}</h1>
-          <div/>
+    <div className="flex flex-col max-w-4xl mx-auto gap-4 min-h-screen">
+      <div className="flex flex-cols gap-4">
+        <span
+          className="text-muted-foreground text-sm"
+        >
+          {post.publishedAt.toLocaleDateString()}
+        </span>
+        <h1 className="text-5xl font-bold">{post.title}</h1>
+        <div />
+      </div>
     </div>
   );
 }
