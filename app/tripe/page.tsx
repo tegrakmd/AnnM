@@ -15,6 +15,9 @@ export default function Allthink() {
           <Link href="./tripe/pages/links/blog">BlogPage</Link>
         </li>
         <li>
+          <Link href="./tripe/pages/links/blogMdx">BlogMdx</Link>
+        </li>
+        <li>
           <Link href="./tripe/pages/links/marquee">Marquee</Link>
         </li>
         <li>
@@ -22,6 +25,9 @@ export default function Allthink() {
         </li>
         <li>
           <Link href="./Saas/tripeTruest">Tailark</Link>
+        </li>
+        <li>
+          <Link href="./blade">Blade</Link>
         </li>
         {/* /home/tegrakmd/Bureau/Apps/ann/app/Saas/tripeTruest */}
       </ul>

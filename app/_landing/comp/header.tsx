@@ -11,7 +11,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
-import { useMedia } from "@tailark/core/hooks/use-media";
+import { useMedia } from "@/lib/hooks/use-media";
 
 const menuItems = [
   { name: "Features", href: "#link" },

@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   images: {
     remotePatterns: [
       {
@@ -17,6 +19,10 @@ const nextConfig: NextConfig = {
         hostname: "raw.githubusercontent.com", // Added for the Shadcn avatar
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
 
       {
         protocol: "https",
@@ -26,5 +32,8 @@ const nextConfig: NextConfig = {
     ],
   },
 };
+const withMDX = createMDX({
+  extension: /\.(md|mdx)$/,
+});
 
-export default nextConfig;
+export default withMDX(nextConfig);

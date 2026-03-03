@@ -41,7 +41,9 @@ export default function RootLayout({
         <div className="bg-gray-600 dark:bg-gray-950 before:fixed before:inset-0 before:-z-40 dark:before:[background-image:url('/grainy-bg.svg')] dark:before:opacity-[.015]"></div>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <LenisWrapper>
-            <ModeToggle />
+            <div className="fixed top-2 left-2 z-10">
+              <ModeToggle />
+            </div>
             {children}
           </LenisWrapper>
         </ThemeProvider>
