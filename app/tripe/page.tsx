@@ -29,7 +29,10 @@ export default function Allthink() {
         <li>
           <Link href="./blade">Blade</Link>
         </li>
-        {/* /home/tegrakmd/Bureau/Apps/ann/app/Saas/tripeTruest */}
+        <li>
+          <Link href="/BlP">NewBlogPage</Link>
+        </li>
+  
       </ul>
       <div
         aria-hidden="true"
