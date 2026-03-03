@@ -35,13 +35,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // before:fixed before:inset-0 before:-z-40 dark:before:[background-image:url('/grainy-bg.svg')] dark:before:opacity-[.015]
+    
     <html lang="en" suppressHydrationWarning className="no-scrollbar">
       <body className={cn(inter.variable, ubuntu.variable)}>
         <div className="bg-gray-600 dark:bg-gray-950 before:fixed before:inset-0 before:-z-40 dark:before:[background-image:url('/grainy-bg.svg')] dark:before:opacity-[.015]"></div>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <LenisWrapper>
-            <div className="fixed top-2 left-2 z-10">
+            <div className="fixed w-fit top-2  left-1/5 z-10 ">
               <ModeToggle />
             </div>
             {children}

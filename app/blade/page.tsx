@@ -20,7 +20,7 @@ export default function Blade() {
                   viewBox="0 0 16 16"
                   fill="currentColor"
                   aria-hidden="true"
-                  dataSlot="icon"
+                  data-slot="icon"
                   className="size-4">
                   <path
                     fillRule="evenodd"
