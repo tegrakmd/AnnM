@@ -10,10 +10,13 @@ export function Herro() {
         <div className="px-4 md:px-0 mx-auto max-w-sm text-center">
           <Annonce7 />
           <h1 className="mt-8 inline-flex  flex-wrap justify-center gap-2 text-balance text-3xl font-geist sm:text-4xl">
-            Shadcn Blocks <span className="text-muted-foreground">for</span>
-            Modern
+            Shadcn Blocks
             <Dusk1 />
-            Websites
+            <span className="text-muted-foreground">for</span>
+            Modern
+            <span className="bg-linear-to-b from-emerald-300 to-emerald-600 bg-clip-text text-transparent sm:font-['Caveat'] sm:text-5xl dark:from-emerald-200 dark:to-emerald-500">
+              Websites.
+            </span>
           </h1>
           <p className="text-forground/60 mx-auto mb-6 mt-4 max-w-md text-balance text-lg ">
             Modern, Responsive, pre-built UI blocks designed for marketing
