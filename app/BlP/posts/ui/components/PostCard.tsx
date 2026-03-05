@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PostType } from "@/lib/post";
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export function PostCard({ post }: { post: PostType }) {
   const formattedDate = new Date(post.publishedAt).toLocaleDateString("en-US", {
@@ -15,7 +16,15 @@ export function PostCard({ post }: { post: PostType }) {
         <div className="before:border-border-illustration relative aspect-video overflow-hidden rounded-[10px] bg-muted before:absolute before:inset-0 before:rounded-[10px] before:border">
           {/* Placeholder pour image - à remplacer avec image réelle si disponible */}
           <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-primary/20 to-secondary/20">
-            <span className="text-muted-foreground text-sm">Post Image</span>
+            <span className="text-muted-foreground sr-only text-sm">Post Image</span>
+            <Image
+              alt="Cutting-Edge Innovations in Data Analytics"
+              src="/upload.png"
+              width={1200}
+              height={1200}
+              loading="lazy"
+              className="aspect-video size-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -43,12 +52,16 @@ export function PostCard({ post }: { post: PostType }) {
             {post.author && (
               <div className="grid grid-cols-[auto_1fr] items-center gap-2">
                 <div className="ring-border-illustration bg-card aspect-square size-6 overflow-hidden rounded-md border border-transparent shadow-md shadow-black/15 ring-1">
-                  <div className="w-full h-full bg-muted flex items-center justify-center text-xs">
-                    A
-                  </div>
+                  <Image
+                    alt="Tegra Kmd"
+                    width={460}
+                    height={460}
+                    className="size-full object-cover"
+                    src="/avat.webp"
+                  />
                 </div>
-                <span className="text-muted-foreground line-clamp-1 text-sm">
-                  Author
+                <span className="text-foreground line-clamp-1 text-sm">
+                  Tegra Kmd
                 </span>
               </div>
             )}
