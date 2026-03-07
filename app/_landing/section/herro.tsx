@@ -1,19 +1,64 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowRight, MoonStar } from "lucide-react";
+import { ArrowRight, ChevronRight, MoonStar } from "lucide-react";
 import Link from "next/link";
+export function AnnoncePro() {
+  return (
+    <div className="group relative mx-auto flex w-fit items-center gap-3 text-sm max-md:justify-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="size-4 text-emerald-600 dark:text-emerald-300">
+        <path d="M15.98 1.804a1 1 0 0 0-1.96 0l-.24 1.192a1 1 0 0 1-.784.785l-1.192.238a1 1 0 0 0 0 1.962l1.192.238a1 1 0 0 1 .785.785l.238 1.192a1 1 0 0 0 1.962 0l.238-1.192a1 1 0 0 1 .785-.785l1.192-.238a1 1 0 0 0 0-1.962l-1.192-.238a1 1 0 0 1-.785-.785l-.238-1.192Z" />
+        <path
+          className="opacity-60"
+          d="M6.949 5.684a1 1 0 0 0-1.898 0l-.683 2.051a1 1 0 0 1-.633.633l-2.051.683a1 1 0 0 0 0 1.898l2.051.684a1 1 0 0 1 .633.632l.683 2.051a1 1 0 0 0 1.898 0l.683-2.051a1 1 0 0 1 .633-.633l2.051-.683a1 1 0 0 0 0-1.898l-2.051-.683a1 1 0 0 1-.633-.633L6.95 5.684Z"
+        />
+        <path
+          className="opacity-50"
+          d="M13.949 13.684a1 1 0 0 0-1.898 0l-.184.551a1 1 0 0 1-.632.633l-.551.183a1 1 0 0 0 0 1.898l.551.183a1 1 0 0 1 .633.633l.183.551a1 1 0 0 0 1.898 0l.184-.551a1 1 0 0 1 .632-.633l.551-.183a1 1 0 0 0 0-1.898l-.551-.184a1 1 0 0 1-.633-.632l-.183-.551Z"
+        />
+      </svg>
 
+      <span className="text-muted-foreground group-hover:text-foreground font-medium">Introducing Veil Kit</span>
+      <Link
+        href="/veil"
+        aria-label="Veil"
+        className="before:absolute before:-inset-4">
+        <div className="relative size-3">
+          <ChevronRight
+            aria-hidden
+            strokeWidth={2.5}
+            className="not-group-hover:-translate-x-2 size-3 translate-y-px opacity-50 duration-200 group-hover:opacity-100"
+          />
+          <ChevronRight
+            aria-hidden
+            strokeWidth={2.5}
+            className="absolute inset-0 size-3 -translate-x-2 translate-y-px opacity-0 duration-200 group-hover:-translate-x-1 group-hover:opacity-25"
+          />
+          <ChevronRight
+            aria-hidden
+            strokeWidth={2.5}
+            className="absolute inset-0 size-3 -translate-x-3 translate-y-px opacity-0 duration-200 group-hover:-translate-x-2 group-hover:opacity-10"
+          />
+        </div>
+      </Link>
+    </div>
+  )
+}
 export function Herro() {
   return (
     <section className="relative w-full h-full [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] md:mx-auto dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)] mt-12 md:mt-32 font-poppins">
       <div className=" max-w-7xl px-4 py-12 mx-auto ">
-        <div className="px-4 md:px-0 mx-auto max-w-sm text-center">
-          <Annonce7 />
-          <h1 className="mt-8 inline-flex  flex-wrap justify-center gap-2 text-balance text-3xl font-geist sm:text-4xl">
-            Shadcn Blocks
-            <Dusk1 />
-            <span className="text-muted-foreground">for</span>
-            Modern
+        <div className="mx-auto max-w-xl text-center">
+          <AnnoncePro />
+
+          <h1 className="mb-7 mt-9 text-balance text-3xl  tracking-tight">
+            Build modern marketing websites with
+            {/* <Dusk1 /> */}
+            {/* <span className="text-muted-foreground">for</span> */}
+            {/* Modern */}
             <span className="bg-linear-to-b from-emerald-300 to-emerald-600 bg-clip-text text-transparent sm:font-['Caveat'] sm:text-5xl dark:from-emerald-200 dark:to-emerald-500">
               Websites.
             </span>

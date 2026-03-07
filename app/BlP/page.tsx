@@ -6,7 +6,8 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen px-4 py-12">
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto max-w-5xl px-6">
+
         <div className="mb-12">
           <h1 className="text-4xl font-bold mb-2">Blog Posts</h1>
           <p className="text-muted-foreground">
