@@ -10,13 +10,18 @@ import { FeatureSection } from "./_landing/section/features";
 import { Herro } from "./_landing/section/herro";
 import { FirstT } from "./tripe/componets/firstT";
 // import { Sou } from "./_landing/GangX-x/sou";
+import HelpRouteSection from "./_landing/section/Dsi";
+import CTASection from "./_landing/section/CtaFooter";
+// import { PagesSection } from "./_landing/section/pullUp";
 
 export default function Page() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen font-ubuntu">
+    <div className="flex flex-col items-center w-full justify-center min-h-screen font-ubuntu">
       {/* <ModeToggle /> */}
       <Herro />
       <MainSection />
+      <HelpRouteSection />
+      <CTASection />
       <FeatureSection />
       <SectionSecond />
       <FirstT />
@@ -24,6 +29,7 @@ export default function Page() {
       {/* <Cartises /> */}
       {/* <Sou /> */}
       <Account />
+      {/* <PagesSection /> */}
     </div>
   );
 }
