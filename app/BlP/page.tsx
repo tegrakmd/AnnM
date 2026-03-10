@@ -9,7 +9,7 @@ export default async function Home() {
       <div className="mx-auto max-w-5xl px-6 prose">
 
         <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-2">Blog Posts</h1>
+          <h1 className="text-4xl text-primary font-bold mb-2">Blog Posts</h1>
           <p className="text-muted-foreground">
             Discover our latest articles and insights
           </p>

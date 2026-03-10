@@ -10,12 +10,15 @@ const PostFrontmatterSchema = z.object({
   publishedAt: z.coerce.date(),
   author: z.boolean().optional(), // rendez author facultatif si absent dans le frontmatter
   published: z.boolean().optional().default(false), // rendez published facultatif si absent dans le frontmatter (je veux dire dans le cadre si c'est prod ou en developpement)
+  imageCover: z.string(),
 });
 
 // Type avec le vrai contenu
 export type PostType = z.infer<typeof PostFrontmatterSchema> & {
   slug: string;
   content: string;
+
+  imageCover: string;
 };
 
 const postsDirectory = path.join(process.cwd(), "app/content");

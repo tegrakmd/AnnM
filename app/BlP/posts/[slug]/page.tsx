@@ -26,18 +26,6 @@ export default async function RoutePagePost({
     day: "numeric",
   });
 
-  // <div className="flex flex-col max-w-4xl mx-auto gap-4 min-h-screen">
-  //   <div className="flex flex-cols gap-4">
-  //     <span
-  //       className="text-muted-foreground text-sm"
-  //     >
-  //       {post.publishedAt.toLocaleDateString()}
-  //     </span>
-  //     <h1 className="text-5xl font-bold">{post.title}</h1>
-  //     <div />
-  //   </div>
-  // </div>
-
   return (
     <div className="@container propse pt-22 pb-16 md:pb-24 md:pt-32">
       <div className="relative mx-auto max-w-5xl px-6">
@@ -90,7 +78,6 @@ export default async function RoutePagePost({
               </ol>
             </nav>
 
-
             {/* Title and date */}
             <header className="my-8 ">
               <time
@@ -118,11 +105,10 @@ export default async function RoutePagePost({
                     <span className="text-muted-foreground sr-only text-sm">Post Cover</span>
                     <Image
                       alt="Cutting-Edge Innovations in Data Analytics"
-                      src="/upload.png"
+                      src={post.imageCover}
                       width={1200}
                       height={1200}
                       loading="lazy"
-
                       className="aspect-video size-full object-cover"
                     />
                   </div>
@@ -257,7 +243,7 @@ export default async function RoutePagePost({
             {/* Right sidebar (sticky) */}
             <div className="h-fit lg:sticky lg:top-20 lg:pl-12">
               {/* Table of contents - visible on large screens */}
-              {/* <div className="max-lg:hidden">
+              <div className="max-lg:hidden">
                 <nav>
                   <h4 className="text-foreground mb-4 text-sm font-semibold">
                     On this page
@@ -293,7 +279,7 @@ export default async function RoutePagePost({
                     </li>
                   </ul>
                 </nav>
-              </div> */}
+              </div>
 
               {/* Authors */}
               <div className="mt-6">

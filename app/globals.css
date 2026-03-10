@@ -599,3 +599,9 @@ html {
 .animate-blink[data-astro-cid-xxd26b7g] {
   animation: blink 1s infinite;
 }
+.mdx-content > *:last-child {
+  margin-bottom: 0px;
+}
+.mdx-content > *:first-child {
+  margin-top: 5px;
+}
