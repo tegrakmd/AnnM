@@ -54,7 +54,7 @@
 
 "use client";
 
-import { useId, useState } from "react";
+import { useId, useState, useEffect } from "react";
 // import { RiMoonClearLine, RiSunLine } from "@remixicon/react";
 import { useTheme } from "next-themes";
 
@@ -62,6 +62,13 @@ export function ModeToggle() {
   const id = useId();
   const { theme, setTheme } = useTheme();
   const [system, setSystem] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // ✅ Synchroniser l'état avec le thème réel après l'hydratation
+  useEffect(() => {
+    setMounted(true);
+    setSystem(theme === "system");
+  }, [theme]);
 
   const toggleTheme = () => {
     /* The smart toggle by @nrjdalal */
@@ -82,6 +89,16 @@ export function ModeToggle() {
       setSystem(true);
     }
   };
+
+  // ✅ Ne pas afficher avant hydratation complète
+  if (!mounted) {
+    return (
+      <div className="flex flex-col justify-center">
+        <div className="relative inline-flex size-9 cursor-pointer items-center justify-center rounded text-muted-foreground" />
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col justify-center">
       <input
