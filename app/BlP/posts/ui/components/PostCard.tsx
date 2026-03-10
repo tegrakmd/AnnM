@@ -45,18 +45,18 @@ export function PostCard({ post }: { post: PostType }) {
       </div> */}
       <div className="bg-card/75 ring-border-illustration hover:bg-card/50 rounded-xl border border-transparent p-0.5 shadow-md ring-1">
         <div className="before:border-border-illustration relative aspect-video overflow-hidden rounded-[10px] before:absolute before:inset-0 before:rounded-[10px] before:border">
-          <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-primary/20 to-secondary/20">
+          <div className=" size-full flex items-center justify-center bg-linear-to-br from-primary/20 to-secondary/20">
             <span className="text-muted-foreground sr-only text-sm">Post Image</span>
             <Image
               alt="Cover Image Blog"
-              src="/upload.png"
-              loading="eager"
+              loading="lazy"
               width="6394"
               height="4500"
               decoding="async"
-              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-              className="aspect-video size-full object-cover"
+              // sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              className="aspect-video size-full object-cover absolute z-20"
               style={{ color: "transparent" }}
+              src="/upload.png"
 
             // referrerPolicy="no-referrer"
             />
@@ -74,7 +74,7 @@ export function PostCard({ post }: { post: PostType }) {
         <h2 className="text-foreground text-balance text-lg font-semibold md:text-xl">
           <Link
             href={`/BlP/posts/${post.slug}`}
-            className="before:absolute before:inset-0 hover:text-primary transition-colors">
+            className="before:absolute before:inset-0 hover:text-primary/20 transition-colors">
             {post.title}
           </Link>
         </h2>
@@ -107,7 +107,7 @@ export function PostCard({ post }: { post: PostType }) {
                 <div className="ring-border-illustration bg-card aspect-square size-6 overflow-hidden rounded-md border border-transparent shadow-md shadow-black/15 ring-1">
                   <Image alt="Shadcn" loading="lazy" width="460" height="460" decoding="async" data-nimg="1" className="size-full object-cover" style={{ color: "transparent" }} src="/avat.webp" />
                 </div>
-                <span className="text-muted-foreground line-clamp-1 text-sm">Shadcn</span>
+                <span className="text-muted-foreground line-clamp-1 text-sm">Tegra kmd</span>
               </div>
             </div>
             <div className="flex h-6 items-center">
