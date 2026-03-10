@@ -4,6 +4,10 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Mdx } from "@/features/mdx/Mdx";
+import { extractHeadings } from "@/lib/mdx-utils";
+import { TableOfContents } from "@/components/TableOfContents";
+import { AuthorsSection } from "@/components/AuthorsSection";
+import { getAuthorsBySlug } from "@/data/authors";
 
 export const metadata: Metadata = {
   title: "Cutting-Edge Innovations in Data Analytics",
@@ -68,10 +72,7 @@ export default async function RoutePagePost({
                 <li
                   data-slot="breadcrumb-item"
                   className="inline-flex items-center gap-1.5">
-                  <span
-
-                    className="hover:text-foreground transition-colors"
-                  >
+                  <span className="hover:text-foreground transition-colors">
                     {post.title}
                   </span>
                 </li>
@@ -82,7 +83,7 @@ export default async function RoutePagePost({
             <header className="my-8 ">
               <time
                 className="text-muted-foreground text-sm"
-                dateTime={post.publishedAt.toISOString()} >
+                dateTime={post.publishedAt.toISOString()}>
                 {formattedDate}
               </time>
               <h1 className="text-foreground text-balance text-3xl font-semibold md:text-4xl md:leading-tight ">
@@ -102,7 +103,9 @@ export default async function RoutePagePost({
               <div className="bg-card/75 ring-border-illustration hover:bg-card/50 rounded-xl border border-transparent p-0.5 shadow-md ring-1 mb-12">
                 <div className="before:border-border-illustration relative aspect-video overflow-hidden rounded-[10px] before:absolute before:inset-0 before:rounded-[10px] before:border">
                   <div className="size-full flex items-center justify-center bg-linear-to-br from-primary/20 to-secondary/20">
-                    <span className="text-muted-foreground sr-only text-sm">Post Cover</span>
+                    <span className="text-muted-foreground sr-only text-sm">
+                      Post Cover
+                    </span>
                     <Image
                       alt="Cutting-Edge Innovations in Data Analytics"
                       src={post.imageCover}
@@ -244,79 +247,17 @@ export default async function RoutePagePost({
             <div className="h-fit lg:sticky lg:top-20 lg:pl-12">
               {/* Table of contents - visible on large screens */}
               <div className="max-lg:hidden">
-                <nav>
-                  <h4 className="text-foreground mb-4 text-sm font-semibold">
-                    On this page
-                  </h4>
-                  <ul className="space-y-3 text-sm">
-                    <li>
-                      <Link
-                        href="#the-rise-of-flexibility"
-                        className="text-muted-foreground hover:text-foreground block transition-colors">
-                        The Rise of Flexibility
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#the-benefits-for-businesses"
-                        className="text-muted-foreground hover:text-foreground block transition-colors">
-                        The Benefits for Businesses
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#the-challenges-to-overcome"
-                        className="text-muted-foreground hover:text-foreground block transition-colors">
-                        The Challenges to Overcome
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#building-a-sustainable-remote-culture"
-                        className="text-muted-foreground hover:text-foreground block transition-colors">
-                        Building a Sustainable Remote Culture
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
+                <TableOfContents headings={extractHeadings(post.content)} />
               </div>
 
               {/* Authors */}
-              <div className="mt-6">
-                <h4 className="text-foreground mb-4 text-sm font-semibold">
-                  Written by
-                </h4>
-                <div className="flex flex-col gap-4">
-                  <div className="grid grid-cols-[auto_1fr] items-center gap-2">
-                    <div className="ring-border-illustration bg-card aspect-square size-6 overflow-hidden rounded-md border border-transparent shadow-md shadow-black/15 ring-1">
-                      <Image
-                        alt="Tegra Kmd"
-                        width={460}
-                        height={460}
-                        className="size-full object-cover"
-                        src="/avat.webp"
-                      />
-                    </div>
-                    <span className="text-foreground line-clamp-1 text-sm">
-                      Tegra Kmd
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-[auto_1fr] items-center gap-2">
-                    <div className="ring-border-illustration bg-card aspect-square size-6 overflow-hidden rounded-md border border-transparent shadow-md shadow-black/15 ring-1">
-                      <Image
-                        alt="Méschac Irung"
-                        width={460}
-                        height={460}
-                        className="size-full object-cover"
-                        src="https://cdn.sanity.io/images/6e6amfga/production/131cd2b198cd8041d178678bd99aefae87bc3902-400x400.jpg"
-                      />
-                    </div>
-                    <span className="text-foreground line-clamp-1 text-sm">
-                      Méschac Irung
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <AuthorsSection
+                authors={
+                  post.authors && post.authors.length > 0
+                    ? getAuthorsBySlug(post.authors)
+                    : getAuthorsBySlug(["tegra_kmd", "meschac_irung"])
+                }
+              />
             </div>
           </div>
         </article>
@@ -324,5 +265,3 @@ export default async function RoutePagePost({
     </div>
   );
 }
-
-
