@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Mdx } from "@/features/mdx/Mdx";
 
 export const metadata: Metadata = {
   title: "Cutting-Edge Innovations in Data Analytics",
@@ -37,13 +38,8 @@ export default async function RoutePagePost({
   //   </div>
   // </div>
 
-
-
-
-
-
   return (
-    <div className="@container pt-22 pb-16 md:pb-24 md:pt-32">
+    <div className="@container propse pt-22 pb-16 md:pb-24 md:pt-32">
       <div className="relative mx-auto max-w-5xl px-6">
         <article>
           <div className="w-full max-w-2xl">
@@ -94,9 +90,9 @@ export default async function RoutePagePost({
               </ol>
             </nav>
 
+
             {/* Title and date */}
             <header className="my-8 ">
-
               <time
                 className="text-muted-foreground text-sm"
                 dateTime={post.publishedAt.toISOString()} >
@@ -115,29 +111,26 @@ export default async function RoutePagePost({
             {/* Left column (article) */}
             <div className="lg:max-w-2xl">
               {/* Cover Image Blog */}
-              <div className="relative ">
-                <div
-                  aria-hidden
-                  className="mask-x-from-75% pointer-events-none absolute -inset-x-32 inset-y-0 border-y"
-                />
-                <div
-                  aria-hidden
-                  className="mask-y-from-55% pointer-events-none absolute -inset-y-32 inset-x-0 border-x"
-                />
-                <div className="relative mb-12 ring-border-illustration bg-card  overflow-hidden rounded-md border border-transparent shadow-md shadow-black/5 ring-1 ">
-                  <Image
-                    alt="Cutting-Edge Innovations in Data Analytics"
-                    src="/upload.png"
-                    width={1200}
-                    height={1200}
-                    loading="lazy"
-                    className="aspect-video size-full object-cover"
-                  />
+
+              <div className="bg-card/75 ring-border-illustration hover:bg-card/50 rounded-xl border border-transparent p-0.5 shadow-md ring-1 mb-12">
+                <div className="before:border-border-illustration relative aspect-video overflow-hidden rounded-[10px] before:absolute before:inset-0 before:rounded-[10px] before:border">
+                  <div className="size-full flex items-center justify-center bg-linear-to-br from-primary/20 to-secondary/20">
+                    <span className="text-muted-foreground sr-only text-sm">Post Cover</span>
+                    <Image
+                      alt="Cutting-Edge Innovations in Data Analytics"
+                      src="/upload.png"
+                      width={1200}
+                      height={1200}
+                      loading="lazy"
+
+                      className="aspect-video size-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
 
               {/* Article body */}
-              <div className="prose prose-slate dark:prose-invert max-w-none">
+              {/* <div className="prose prose-slate dark:prose-invert max-w-none">
                 <p className="text-muted-foreground mb-4 text-base leading-relaxed">
                   In the last decade, remote work has evolved from a niche
                   concept into a global movement reshaping how teams operate.
@@ -257,49 +250,50 @@ export default async function RoutePagePost({
                   </strong>{" "}
                   in a digital-first world.
                 </p>
-              </div>
+              </div> */}
+              <Mdx>{post.content}</Mdx>
             </div>
 
             {/* Right sidebar (sticky) */}
             <div className="h-fit lg:sticky lg:top-20 lg:pl-12">
               {/* Table of contents - visible on large screens */}
-              <div className="max-lg:hidden">
+              {/* <div className="max-lg:hidden">
                 <nav>
                   <h4 className="text-foreground mb-4 text-sm font-semibold">
                     On this page
                   </h4>
                   <ul className="space-y-3 text-sm">
                     <li>
-                      <a
+                      <Link
                         href="#the-rise-of-flexibility"
                         className="text-muted-foreground hover:text-foreground block transition-colors">
                         The Rise of Flexibility
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="#the-benefits-for-businesses"
                         className="text-muted-foreground hover:text-foreground block transition-colors">
                         The Benefits for Businesses
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="#the-challenges-to-overcome"
                         className="text-muted-foreground hover:text-foreground block transition-colors">
                         The Challenges to Overcome
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="#building-a-sustainable-remote-culture"
                         className="text-muted-foreground hover:text-foreground block transition-colors">
                         Building a Sustainable Remote Culture
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
-              </div>
+              </div> */}
 
               {/* Authors */}
               <div className="mt-6">

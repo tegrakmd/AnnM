@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Ubuntu, Caveat } from "next/font/google";
+// import { GeistSans } from 'geist/font/sans';
+// import { GeistMono } from 'geist/font/mono';
+// import { GeistPixelSquare, GeistPixelGrid, GeistPixelCircle, GeistPixelTriangle, GeistPixelLine } from 'geist/font/pixel';
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import LenisWrapper from "@/components/LenisWrapper";
 import { ModeToggle } from "@/components/modeToggle";
+
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
