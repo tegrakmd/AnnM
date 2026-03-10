@@ -9,6 +9,7 @@ const PostFrontmatterSchema = z.object({
   description: z.string(),
   publishedAt: z.coerce.date(),
   author: z.boolean().optional(), // rendez author facultatif si absent dans le frontmatter
+  authors: z.array(z.string()).optional(), // Liste des slugs des auteurs
   published: z.boolean().optional().default(false), // rendez published facultatif si absent dans le frontmatter (je veux dire dans le cadre si c'est prod ou en developpement)
   imageCover: z.string(),
 });
