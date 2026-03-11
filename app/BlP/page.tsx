@@ -6,7 +6,7 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen px-4 py-12">
-      <div className="mx-auto max-w-5xl px-6 ">
+      <div className="mx-auto max-w-5xl  md:px-6 ">
         <div className="mb-14 md:mb-20">
           <h1 className="text-primary dark:text-white  text-3xl md:text-5xl font-bold mb-2">
             Blog Posts
@@ -15,7 +15,6 @@ export default async function Home() {
             Discover our latest articles and insights
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {posts.map((post) => (
             <PostCard key={post.slug} post={post} />
