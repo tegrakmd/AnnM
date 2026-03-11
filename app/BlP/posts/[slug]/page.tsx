@@ -31,7 +31,7 @@ export default async function RoutePagePost({
   });
 
   return (
-    <div className="@container propse pt-22 pb-16 md:pb-24 md:pt-32">
+    <div className="@container propse pt-22 pb-16 md:pb-24 md:pt-32 font-ubuntu">
       <div className="relative mx-auto max-w-5xl px-6">
         <article>
           <div className="w-full max-w-2xl">

@@ -5,7 +5,7 @@ export default async function Home() {
   const posts = await getPosts();
 
   return (
-    <div className="min-h-screen px-4 py-12">
+    <div className="min-h-screen px-4 py-12 font-ubuntu">
       <div className="mx-auto max-w-5xl  md:px-6 ">
         <div className="mb-14 md:mb-20">
           <h1 className="text-primary dark:text-white  text-3xl md:text-5xl font-bold mb-2">

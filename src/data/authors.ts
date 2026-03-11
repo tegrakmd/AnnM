@@ -17,8 +17,13 @@ export const AUTHORS: Record<string, Author> = {
       "https://cdn.sanity.io/images/6e6amfga/production/131cd2b198cd8041d178678bd99aefae87bc3902-400x400.jpg",
     bio: "Data Analyst & Tech Writer",
   },
+  Delba_B: {
+    name: "Delba B",
+    image: "/delbaB.jpeg",
+    bio: "Software dev",
+  },
 };
-
+// delbaB.jpeg;
 /**
  * Récupère les auteurs par leurs slugs
  */
