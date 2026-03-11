@@ -9,16 +9,24 @@ export interface Author {
 
 interface AuthorsSectionProps {
   authors: Author[];
+  showTitle?: boolean;
 }
 
-export function AuthorsSection({ authors }: AuthorsSectionProps) {
+export function AuthorsSection({
+  authors,
+  showTitle = true,
+}: AuthorsSectionProps) {
   if (!authors || authors.length === 0) {
     return null;
   }
 
   return (
     <div className="mt-6">
-      <h4 className="text-foreground mb-4 text-sm font-semibold">Écrit par</h4>
+      {showTitle && (
+        <h4 className="text-foreground mb-4 text-sm font-semibold">
+          Écrit par
+        </h4>
+      )}
       <div className="flex flex-col gap-4">
         {authors.map((author) => (
           <div

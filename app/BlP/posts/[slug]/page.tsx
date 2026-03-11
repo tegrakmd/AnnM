@@ -99,7 +99,6 @@ export default async function RoutePagePost({
             {/* Left column (article) */}
             <div className="lg:max-w-2xl">
               {/* Cover Image Blog */}
-
               <div className="bg-card/75 ring-border-illustration hover:bg-card/50 rounded-xl border border-transparent p-0.5 shadow-md ring-1 mb-12">
                 <div className="before:border-border-illustration relative aspect-video overflow-hidden rounded-[10px] before:absolute before:inset-0 before:rounded-[10px] before:border">
                   <div className="size-full flex items-center justify-center bg-linear-to-br from-primary/20 to-secondary/20">
@@ -118,128 +117,6 @@ export default async function RoutePagePost({
                 </div>
               </div>
 
-              {/* Article body */}
-              {/* <div className="prose prose-slate dark:prose-invert max-w-none">
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                  In the last decade, remote work has evolved from a niche
-                  concept into a global movement reshaping how teams operate.
-                  What started as a temporary solution during global crises has
-                  become a permanent shift in how companies define productivity,
-                  collaboration, and employee satisfaction.
-                </p>
-
-                <h2
-                  id="the-rise-of-flexibility"
-                  className="text-foreground mb-4 mt-16 scroll-mt-20 text-2xl font-semibold">
-                  The Rise of Flexibility
-                </h2>
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                  Remote work has opened doors to a new level of flexibility.
-                  Employees can now tailor their workdays to match their
-                  personal energy levels, environments, and responsibilities.
-                  For many, this has resulted in{" "}
-                  <strong className="text-foreground font-semibold">
-                    improved mental health
-                  </strong>{" "}
-                  and a healthier{" "}
-                  <strong className="text-foreground font-semibold">
-                    work–life balance
-                  </strong>
-                  .
-                </p>
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                  Companies, in turn, are recognizing that{" "}
-                  <strong className="text-foreground font-semibold">
-                    results matter more than location
-                  </strong>
-                  . The traditional 9-to-5 model is being replaced by
-                  asynchronous collaboration, where output takes precedence over
-                  office presence.
-                </p>
-
-                <h2
-                  id="the-benefits-for-businesses"
-                  className="text-foreground mb-4 mt-16 scroll-mt-20 text-2xl font-semibold">
-                  The Benefits for Businesses
-                </h2>
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                  Organizations embracing remote work often see a direct impact
-                  on their bottom line:
-                </p>
-                <ul className="text-muted-foreground mb-4 ml-6 list-disc space-y-2">
-                  <li className="leading-relaxed">
-                    <strong className="text-foreground font-semibold">
-                      Wider talent pool:
-                    </strong>{" "}
-                    Companies are no longer limited by geography when hiring.
-                  </li>
-                  <li className="leading-relaxed">
-                    <strong className="text-foreground font-semibold">
-                      Lower operational costs:
-                    </strong>{" "}
-                    Less spending on office space, equipment, and utilities.
-                  </li>
-                  <li className="leading-relaxed">
-                    <strong className="text-foreground font-semibold">
-                      Higher retention:
-                    </strong>{" "}
-                    Employees value autonomy, which fosters loyalty and trust.
-                  </li>
-                </ul>
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                  Beyond numbers, remote-first companies tend to nurture a more{" "}
-                  <strong className="text-foreground font-semibold">
-                    inclusive and diverse workforce
-                  </strong>
-                  , since barriers like relocation and commuting are removed.
-                </p>
-
-                <h2
-                  id="the-challenges-to-overcome"
-                  className="text-foreground mb-4 mt-16 scroll-mt-20 text-2xl font-semibold">
-                  The Challenges to Overcome
-                </h2>
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                  However, adopting remote work isn’t without challenges.
-                  Communication gaps, time zone differences, and feelings of
-                  isolation can affect team dynamics.
-                </p>
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                  To succeed, companies must{" "}
-                  <strong className="text-foreground font-semibold">
-                    intentionally design
-                  </strong>{" "}
-                  their remote culture — investing in the right tools,
-                  establishing clear expectations, and creating opportunities
-                  for informal connection. Virtual coffee chats, async
-                  stand-ups, and annual in-person retreats are all effective
-                  ways to bridge the gap.
-                </p>
-
-                <h2
-                  id="building-a-sustainable-remote-culture"
-                  className="text-foreground mb-4 mt-16 scroll-mt-20 text-2xl font-semibold">
-                  Building a Sustainable Remote Culture
-                </h2>
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                  True remote culture is built on{" "}
-                  <strong className="text-foreground font-semibold">
-                    trust, transparency, and communication
-                  </strong>
-                  . Leaders need to model flexibility while ensuring
-                  accountability. Regular feedback loops, clear documentation,
-                  and a culture of recognition make remote work sustainable in
-                  the long term.
-                </p>
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                  Ultimately, embracing remote work isn’t just about where
-                  people work — it’s about{" "}
-                  <strong className="text-foreground font-semibold">
-                    how teams connect, create, and grow together
-                  </strong>{" "}
-                  in a digital-first world.
-                </p>
-              </div> */}
               <Mdx>{post.content}</Mdx>
             </div>
 
@@ -249,7 +126,6 @@ export default async function RoutePagePost({
               <div className="max-lg:hidden">
                 <TableOfContents headings={extractHeadings(post.content)} />
               </div>
-
               {/* Authors */}
               <AuthorsSection
                 authors={
