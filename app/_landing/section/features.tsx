@@ -85,7 +85,7 @@ export function FeatureSection() {
                     {/* Card Header */}
                     <span className="text-muted-foreground text-xs flex items-center gap-1.5 relative z-10">
                       Today
-                      <span className="bg-foreground/50 size-1 rounded-full"></span>{" "}
+                      <span className="bg-foreground/50 size-1 rounded-full"></span>
                       09:15 AM
                     </span>
                     <div className="mt-1 text-lg font-semibold relative z-10">
@@ -93,26 +93,8 @@ export function FeatureSection() {
                     </div>
 
                     {/* Audio/Play Pill */}
-                    <div className="bg-foreground/10 group relative mb-4 mt-3 h-fit w-fit cursor-pointer overflow-hidden rounded-full p-px shadow shadow-black/5 z-10">
-                      <div className="bg-linear-to-br/increasing mask-r-to-75% mask-r-from-25% duration-5000 absolute inset-0 aspect-square -translate-y-1/3 animate-spin from-emerald-400 via-blue-500 to-indigo-400 opacity-50"></div>
-                      <div className="group-hover:bg-illustration bg-background/95 relative flex h-8 items-center gap-1.5 rounded-full px-3 text-sm duration-100">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="lucide lucide-play fill-foreground *:not-first:opacity-50 size-3">
-                          <polygon points="6 3 20 12 6 21 6 3" />
-                        </svg>
-                        03:47
-                      </div>
-                    </div>
 
+                    <AudioPlay />
                     {/* Inner Card Tabs */}
                     <div className="space-y-4 relative z-10">
                       <div className="flex gap-5 border-b *:-mb-px *:flex *:cursor-pointer *:items-center *:gap-1.5 *:py-2 *:text-sm *:[&>svg]:size-3.5 text-muted-foreground">
@@ -230,7 +212,7 @@ export function FeatureSection() {
               </div>
               <Image
                 src="https://images.unsplash.com/photo-1723873591148-342982be8bca?q=80&w=2340&auto=format&fit=crop"
-                alt="AI Models Interface Background"
+                alt="AI Models Interface"
                 fill
                 className="size-full object-cover opacity-65 dark:opacity-35"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 60vw"
@@ -253,3 +235,27 @@ export const MistKitLogo = () => (
     />
   </div>
 );
+
+export function AudioPlay() {
+  return (
+    <div className="bg-foreground/10 group relative mb-4 mt-3 h-fit w-fit cursor-pointer overflow-hidden rounded-full p-px shadow shadow-black/5 z-10">
+      <div className="bg-linear-to-br/increasing mask-r-to-75% mask-r-from-25% duration-5000 absolute inset-0 aspect-square -translate-y-1/3 animate-spin from-emerald-400 via-blue-500 to-indigo-400 opacity-50"></div>
+      <div className="group-hover:bg-illustration bg-background/95 relative flex h-8 items-center gap-1.5 rounded-full px-3 text-sm duration-100">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-play fill-foreground *:not-first:opacity-50 size-3">
+          <polygon points="6 3 20 12 6 21 6 3" />
+        </svg>
+        03:47
+      </div>
+    </div>
+  )
+}

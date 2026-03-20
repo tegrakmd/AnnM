@@ -1,12 +1,51 @@
+import { ModeToggle } from "@/components/modeToggle";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
+const Productlinks = [
+  {
+    title: "Features",
+    href: "/",
+  },
+  {
+    title: "Solution ",
+    href: "/",
+  },
+  {
+    title: "Services",
+    href: "/",
+  },
+  {
+    title: "Partnerships",
+    href: "/",
+  },
+  {
+    title: "Mobile App",
+    href: "/",
+  },
+];
+const CompanyLinks = [
+  {
+    title: "About",
+    href: "/",
+  },
+  {
+    title: "Licence ",
+    href: "/",
+  },
+  {
+    title: "Privacy",
+    href: "/",
+  },
+
+]
 
 export default function BlogPage() {
   return (
     <main role="main" className="bg-indigo-900/10 min-h-screen">
       <section>
-        <div className="@container">
+        <div className="@container bg-accent/20">
           <article>
             <div className="@container grid grid-cols-[auto_1fr_auto] xl:grid-cols-[1fr_auto_1fr]">
               <div aria-hidden="true" className="p-[0.5px]">
@@ -50,7 +89,7 @@ export default function BlogPage() {
                         </li>
                       </ol>
                     </nav>
-                    <h1 className="text-foreground my-6 text-balance text-4xl font-bold md:text-5xl">
+                    <h1 className="bg-linear-to-b from-emerald-300 to-emerald-600 dark:from-emerald-200 dark:to-emerald-500 bg-clip-text text-transparent my-6 text-balance text-4xl font-bold md:text-5xl">
                       Build your Safe Tripe
                     </h1>
                     <p className="text-muted-foreground text-xl">
@@ -84,7 +123,7 @@ export default function BlogPage() {
                             height="460"
                             decoding="async"
                             className="size-full object-cover"
-                            src="/upload.png"
+                            src="/delbaB.jpeg"
                             referrerPolicy="no-referrer"
                           />
                         </div>
@@ -259,8 +298,8 @@ export default function BlogPage() {
           </article>
         </div>
       </section>
-      <footer role="contentinfo">
-        <div className="@container grid grid-cols-[auto_1fr_auto] xl:grid-cols-[1fr_auto_1fr]">
+      <footer role="contentinfo" className="bg-accent/20">
+        <div className="@container  grid grid-cols-[auto_1fr_auto] xl:grid-cols-[1fr_auto_1fr]">
           <div aria-hidden="true" className="p-[0.5px]">
             <div className="bg-card/75 h-full w-2 rounded lg:w-12 xl:w-full"></div>
           </div>
@@ -283,7 +322,7 @@ export default function BlogPage() {
                 <div
                   data-grid-content="true"
                   className="@4xl:col-span-2 space-y-6 p-6 lg:p-12">
-                  <Link
+                  {/* <Link
                     aria-label="go home"
                     className="block size-fit"
                     href="#">
@@ -313,9 +352,10 @@ export default function BlogPage() {
                         </linearGradient>
                       </defs>
                     </svg>
-                  </Link>
+                  </Link> */}
+                  <span className="bg-linear-to-b from-emerald-300 to-emerald-600 dark:from-emerald-200 dark:to-emerald-500 bg-clip-text text-transparent sm:font-['Caveat'] sm:text-2xl  block">Websites</span>
                   <p className="text-muted-foreground text-balance">
-                    Tailark is a platform for building AI-powered applications.
+                    Website is a platform for building fast your platform applications.
                   </p>
                 </div>
                 <div className="@4xl:col-span-3 grid gap-px sm:grid-cols-3">
@@ -324,26 +364,15 @@ export default function BlogPage() {
                     className="space-y-4 p-6 text-sm lg:p-12">
                     <span className="block font-medium">Product</span>
                     <div className="flex flex-wrap gap-4 sm:flex-col">
-                      <a
-                        className="text-muted-foreground hover:text-primary block duration-150"
-                        href="#">
-                        <span>Features</span>
-                      </a>
-                      <a
-                        className="text-muted-foreground hover:text-primary block duration-150"
-                        href="#">
-                        <span>Solution</span>
-                      </a>
-                      <a
-                        className="text-muted-foreground hover:text-primary block duration-150"
-                        href="#">
-                        <span>Partnerships</span>
-                      </a>
-                      <a
-                        className="text-muted-foreground hover:text-primary block duration-150"
-                        href="#">
-                        <span>Mobile App</span>
-                      </a>
+                      {Productlinks.map((link, index) => (
+                        <Link
+                          key={index}
+                          href={link.href}
+                          className="text-muted-foreground hover:text-primary block duration-150"
+                        >
+                          <span>{link.title}</span>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                   <div
@@ -351,21 +380,15 @@ export default function BlogPage() {
                     className="space-y-4 p-6 text-sm lg:p-12">
                     <span className="block font-medium">Company</span>
                     <div className="flex flex-wrap gap-4 sm:flex-col">
-                      <a
-                        className="text-muted-foreground hover:text-primary block duration-150"
-                        href="#">
-                        <span>About</span>
-                      </a>
-                      <a
-                        className="text-muted-foreground hover:text-primary block duration-150"
-                        href="#">
-                        <span>Licence</span>
-                      </a>
-                      <a
-                        className="text-muted-foreground hover:text-primary block duration-150"
-                        href="#">
-                        <span>Privacy</span>
-                      </a>
+                      {CompanyLinks.map((link, index) => (
+                        <Link
+                          key={index}
+                          href={link.href}
+                          className="text-muted-foreground hover:text-primary block duration-150"
+                        >
+                          <span>{link.title}</span>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                   <div
@@ -373,7 +396,7 @@ export default function BlogPage() {
                     className="space-y-4 p-6 lg:p-12">
                     <span className="block font-medium">Community</span>
                     <div className="flex flex-wrap gap-3 text-sm">
-                      <a
+                      <Link
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="X/Twitter"
@@ -389,8 +412,8 @@ export default function BlogPage() {
                             fill="currentColor"
                             d="M10.488 14.651L15.25 21h7l-7.858-10.478L20.93 3h-2.65l-5.117 5.886L8.75 3h-7l7.51 10.015L2.32 21h2.65zM16.25 19L5.75 5h2l10.5 14z"></path>
                         </svg>
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn"
@@ -406,7 +429,7 @@ export default function BlogPage() {
                             fill="currentColor"
                             d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"></path>
                         </svg>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -418,6 +441,7 @@ export default function BlogPage() {
                   <span className="text-muted-foreground text-sm">
                     © 2026 Tailark, All rights reserved{" "}
                   </span>
+                  <div><ModeToggle /> </div>
                 </div>
               </div>
             </div>

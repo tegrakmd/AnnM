@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function EngineFeatureSection() {
   return (
-    <section className=" @container overflow-hidden py-24">
+    <section className="@container overflow-hidden py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-12">
         <div className="grid gap-6 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3">
           {/* Left Column: Heading & Navigation */}

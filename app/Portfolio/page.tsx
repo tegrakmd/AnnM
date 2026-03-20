@@ -37,11 +37,8 @@ export default function Home() {
   return (
     <div className="overflow-hidden px-4 has-not-data-home:before:absolute has-not-data-home:before:inset-x-0 has-not-data-home:before:h-100 has-not-data-home:before:bg-linear-to-b has-not-data-home:before:from-zinc-100 has-data-home:bg-zinc-50 supports-[overflow:clip]:overflow-clip sm:px-6 dark:has-not-data-home:before:hidden dark:has-data-home:bg-zinc-950">
       <div className="relative mx-auto w-full max-w-6xl before:absolute before:inset-y-0 before:-left-12 before:w-px before:bg-[linear-gradient(to_bottom,--theme(--color-border/.3),--theme(--color-border)_200px,--theme(--color-border)_calc(100%-200px),--theme(--color-border/.3))] after:absolute after:inset-y-0 after:-right-12 after:w-px after:bg-[linear-gradient(to_bottom,--theme(--color-border/.3),--theme(--color-border)_200px,--theme(--color-border)_calc(100%-200px),--theme(--color-border/.3))]">
-        <div className="relative mb-14 before:absolute before:-inset-x-32 before:bottom-0 before:h-px before:bg-[linear-gradient(to_right,--theme(--color-border/.3),--theme(--color-border)_200px,--theme(--color-border)_calc(100%-200px),--theme(--color-border/.3))]">
-          <div className="before:absolute before:-bottom-px before:-left-12 before:z-10 before:-ml-px before:size-[3px] before:bg-ring/50 after:absolute after:-right-12 after:-bottom-px after:z-10 after:-mr-px after:size-[3px] after:bg-ring/50"></div>
-          <div className="h-10"></div>
-        </div>
-        <div className="relative flex min-h-screen flex-col">
+        <NarutoH />
+        <div className="relative ">
           <div className=" flex flex-col gap-y-6  ">
             <HeroSection />
             <Projects />
@@ -55,13 +52,26 @@ export default function Home() {
             <OpenRoleDeux />
           </div>
         </div>
-        <div className="relative mt-16 py-8 before:absolute before:-inset-x-32 before:top-0 before:h-px before:bg-[linear-gradient(to_right,--theme(--color-border/.3),--theme(--color-border)_200px,--theme(--color-border)_calc(100%-200px),--theme(--color-border/.3))] md:mt-20">
-          <div
-            className="before:absolute before:-top-px before:-left-12 before:z-10 before:-ml-px before:size-[3px] before:bg-ring/50 after:absolute after:-right-12 after:-top-px after:z-10 after:-mr-px after:size-[3px] after:bg-ring/50"
-            aria-hidden="true"></div>
-          <div className="h-10"></div>{" "}
-        </div>
+        <Blobobo />
       </div>
     </div>
   );
+}
+const Blobobo = () => {
+  return (
+    <div className="relative mt-16 py-8 before:absolute before:-inset-x-32 before:top-0 before:h-px before:bg-[linear-gradient(to_right,--theme(--color-border/.3),--theme(--color-border)_200px,--theme(--color-border)_calc(100%-200px),--theme(--color-border/.3))] md:mt-20">
+      <div
+        className="before:absolute before:-top-px before:-left-12 before:z-10 before:-ml-px before:size-[3px] before:bg-ring/50 after:absolute after:-right-12 after:-top-px after:z-10 after:-mr-px after:size-[3px] after:bg-ring/50"
+        aria-hidden="true"></div>
+      <div className="h-10"></div>
+    </div>
+  )
+}
+const NarutoH = () => {
+  return (
+    <div className="relative mb-14 before:absolute before:-inset-x-32 before:bottom-0 before:h-px before:bg-[linear-gradient(to_right,--theme(--color-border/.3),--theme(--color-border)_200px,--theme(--color-border)_calc(100%-200px),--theme(--color-border/.3))]">
+      <div className="before:absolute before:-bottom-px before:-left-12 before:z-10 before:-ml-px before:size-[3px] before:bg-ring/50 after:absolute after:-right-12 after:-bottom-px after:z-10 after:-mr-px after:size-[3px] after:bg-ring/50"></div>
+      <div className="h-10"></div>
+    </div>
+  )
 }
