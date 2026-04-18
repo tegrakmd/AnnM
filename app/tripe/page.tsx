@@ -1,3 +1,4 @@
+import { TransitionLink } from "@/context/TransitionLink";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,33 +7,33 @@ export default function Allthink() {
     <div className="w-full min-h-dvh flex flex-col gap-4 items-center justify-center ">
       <ul className="flex items-center gap-4">
         <li>
-          <Link href="./tripe/pages/links/Grid">Grid</Link>
+          <TransitionLink href="./tripe/pages/links/Grid">Grid</TransitionLink>
         </li>
         <li>
-          <Link href="./tripe/pages/links/Pipile">Pipiline</Link>
+          <TransitionLink href="./tripe/pages/links/Pipile">Pipiline</TransitionLink>
         </li>
         <li>
-          <Link href="./tripe/pages/links/blog">BlogPage</Link>
+          <TransitionLink href="./tripe/pages/links/blog">BlogPage</TransitionLink>
         </li>
         <li>
-          <Link href="./tripe/pages/links/blogMdx">BlogMdx</Link>
+          <TransitionLink href="./tripe/pages/links/blogMdx">BlogMdx</TransitionLink>
         </li>
         <li>
-          <Link href="./tripe/pages/links/marquee">Marquee</Link>
+          <TransitionLink href="./tripe/pages/links/marquee">Marquee</TransitionLink>
         </li>
         <li>
-          <Link href="./tripe/pages/links/Register">Register</Link>
+          <TransitionLink href="./tripe/pages/links/Register">Register</TransitionLink>
         </li>
         <li>
-          <Link href="./Saas/tripeTruest">Tailark</Link>
+          <TransitionLink href="./Saas/tripeTruest">Tailark</TransitionLink>
         </li>
         <li>
-          <Link href="./blade">Blade</Link>
+          <TransitionLink href="./blade">Blade</TransitionLink>
         </li>
         <li>
-          <Link href="/BlP">NewBlogPage</Link>
+          <TransitionLink href="/BlP">NewBlogPage</TransitionLink>
         </li>
-  
+
       </ul>
       <div
         aria-hidden="true"

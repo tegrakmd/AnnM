@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import LenisWrapper from "@/components/LenisWrapper";
 import { ModeToggle } from "@/components/modeToggle";
+import { TransitionProvider } from "@/context/TransitionContext";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -87,10 +88,12 @@ export default function RootLayout({
         <div className="bg-gray-600 dark:bg-gray-950 before:fixed before:inset-0 before:-z-40 dark:before:[background-image:url('/grainy-bg.svg')] dark:before:opacity-[.015]"></div>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <LenisWrapper>
-            <div className="fixed w-fit top-2  left-1/5 z-10 ">
-              <ModeToggle />
-            </div>
-            {children}
+            <TransitionProvider>
+              <div className="fixed w-fit top-2  left-1/5 z-10 ">
+                <ModeToggle />
+              </div>
+              {children}
+            </TransitionProvider>
           </LenisWrapper>
         </ThemeProvider>
       </body>
