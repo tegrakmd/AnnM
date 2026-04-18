@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Allthink() {
   return (
     <div className="w-full min-h-dvh flex flex-col gap-4 items-center justify-center ">
-      <ul className="flex items-center gap-4">
+      <ul className="flex flex-wrap max-w-[60ch] justify-center items-center gap-4 px-4">
         <li>
           <TransitionLink href="./tripe/pages/links/Grid">Grid</TransitionLink>
         </li>
