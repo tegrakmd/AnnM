@@ -58,7 +58,7 @@ export function Herro() {
             {/* <Dusk1 /> */}
             {/* <span className="text-muted-foreground">for</span> */}
             {/* Modern */}
-            <span className="bg-linear-to-b from-emerald-300 to-emerald-600 bg-clip-text text-transparent sm:font-['Caveat'] sm:text-5xl dark:from-emerald-200 dark:to-emerald-500">
+            <span className="bg-linear-to-b from-emerald-300 to-emerald-600 bg-clip-text text-transparent font-['Caveat'] sm:text-5xl dark:from-emerald-200 dark:to-emerald-500">
               Websites.
             </span>
           </h1>

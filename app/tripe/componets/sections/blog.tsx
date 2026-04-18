@@ -89,7 +89,7 @@ export default function BlogPage() {
                         </li>
                       </ol>
                     </nav>
-                    <h1 className="bg-linear-to-b from-emerald-300 to-emerald-600 dark:from-emerald-200 dark:to-emerald-500 bg-clip-text text-transparent my-6 text-balance text-4xl font-bold md:text-5xl">
+                    <h1 className="bg-linear-to-b from-emerald-300 to-emerald-600 dark:from-emerald-200 dark:to-emerald-500 bg-clip-text text-transparent my-6 text-balance text-4xl font-bold md:text-5xl font-['Caveat']">
                       Build your Safe Tripe
                     </h1>
                     <p className="text-muted-foreground text-xl">

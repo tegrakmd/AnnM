@@ -24,15 +24,15 @@ export const TransitionProvider = ({ children }: { children: ReactNode }) => {
     const initTimeline = () => {
         if (!overlayRef.current) return;
         tl.current = gsap.timeline({ paused: true })
-            .set(overlayRef.current, { x: "100%" }) // start off‑screen right
+            .set(overlayRef.current, { y: "100%" }) // start off‑screen right
             .to(overlayRef.current, {
                 duration: 0.6,
-                x: "0%",
+                y: "0%",
                 ease: "power2.inOut",
             })
             .to(overlayRef.current, {
                 duration: 0.6,
-                x: "-100%",
+                y: "-100%",
                 ease: "power2.inOut",
             });
     };
@@ -67,8 +67,8 @@ export const TransitionProvider = ({ children }: { children: ReactNode }) => {
             {children}
             <div
                 ref={overlayRef}
-                className="fixed inset-0 z-50 bg-black pointer-events-none"
-                style={{ transform: "translateX(100%)" }}
+                className="fixed inset-0 z-50 bg-black dark:bg-white pointer-events-none"
+                style={{ transform: "translateY(100%)" }}
             />
         </TransitionContext.Provider>
     );
