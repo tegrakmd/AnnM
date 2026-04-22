@@ -13,7 +13,7 @@ const ProjectList: ProjectListProps[] = [
   {
     Id: 1,
     Image: "/avat.webp",
-    Link: "mweziparteners.com",
+    Link: "www.mweziparteners.com",
     Name: "Mwezi parteners",
     dateMois: "Feb",
     dateDate: 19,
@@ -82,6 +82,9 @@ const ProjeListData = () => {
     <div className="flex flex-col gap-0.5 -mx-3">
       {ProjectList.map((doc) => (
         <Link
+          aria-label=""
+          target="_blank"
+          rel="noopener noreferrer"
           key={doc.Id}
           href={doc.Link}
           className="group relative flex items-center justify-between rounded-xl px-4 py-3 text-left transition-transform duration-200 hover:bg-muted/40 active:scale-[0.99]">

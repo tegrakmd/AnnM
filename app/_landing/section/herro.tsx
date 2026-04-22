@@ -53,6 +53,7 @@ export function Herro() {
       <div className=" max-w-7xl px-4 py-12 mx-auto ">
         <div className="mx-auto max-w-xl text-center">
           <AnnoncePro />
+
           <h1 className="mb-7 mt-9 text-balance text-3xl  tracking-tight">
             Build modern marketing websites with
             {/* <Dusk1 /> */}

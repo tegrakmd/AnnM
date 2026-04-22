@@ -1,4 +1,5 @@
-import { TransitionLink } from "@/context/TransitionLink";
+// import { TransitionLink } from "@/context/TransitionLink";
+import { CustomLink } from "@/transition/trans";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,31 +8,31 @@ export default function Allthink() {
     <div className="w-full min-h-dvh flex flex-col gap-4 items-center justify-center ">
       <ul className="flex flex-wrap max-w-[60ch] justify-center items-center gap-4 px-4">
         <li>
-          <TransitionLink href="./tripe/pages/links/Grid">Grid</TransitionLink>
+          <CustomLink href="./tripe/pages/links/Grid">Grid</CustomLink>
         </li>
         <li>
-          <TransitionLink href="./tripe/pages/links/Pipile">Pipiline</TransitionLink>
+          <CustomLink href="./tripe/pages/links/Pipile">Pipiline</CustomLink>
         </li>
         <li>
-          <TransitionLink href="./tripe/pages/links/blog">BlogPage</TransitionLink>
+          <CustomLink href="./tripe/pages/links/blog">BlogPage</CustomLink>
         </li>
         <li>
-          <TransitionLink href="./tripe/pages/links/blogMdx">BlogMdx</TransitionLink>
+          <CustomLink href="./tripe/pages/links/blogMdx">BlogMdx</CustomLink>
         </li>
         <li>
-          <TransitionLink href="./tripe/pages/links/marquee">Marquee</TransitionLink>
+          <CustomLink href="./tripe/pages/links/marquee">Marquee</CustomLink>
         </li>
         <li>
-          <TransitionLink href="./tripe/pages/links/Register">Register</TransitionLink>
+          <CustomLink href="./tripe/pages/links/Register">Register</CustomLink>
         </li>
         <li>
-          <TransitionLink href="./Saas/tripeTruest">Tailark</TransitionLink>
+          <CustomLink href="./Saas/tripeTruest">Tailark</CustomLink>
         </li>
         <li>
-          <TransitionLink href="./blade">Blade</TransitionLink>
+          <CustomLink href="./blade">Blade</CustomLink>
         </li>
         <li>
-          <TransitionLink href="/BlP">NewBlogPage</TransitionLink>
+          <CustomLink href="/BlP">NewBlogPage</CustomLink>
         </li>
 
       </ul>
